@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="16" short-name="starlink-song-guess" url="https://polygon.codeforces.com/p7zHIvy/sjmjys954646/starlink-song-guess">
+    <names>
+        <name language="korean" value="스타링크 노래 맞히기"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>23</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="generator 10 30 10 1" method="generated"/>
+                <test cmd="generator 10 30 10 2" method="generated"/>
+                <test cmd="generator 10 30 10 3" method="generated"/>
+                <test cmd="generator 10 30 10 4" method="generated"/>
+                <test cmd="generator 10 30 10 5" method="generated"/>
+                <test cmd="generator 100 300 10 1" method="generated"/>
+                <test cmd="generator 100 300 10 2" method="generated"/>
+                <test cmd="generator 100 300 10 3" method="generated"/>
+                <test cmd="generator 100 300 10 4" method="generated"/>
+                <test cmd="generator 100 300 10 5" method="generated"/>
+                <test cmd="generator 100 300 10 6" method="generated"/>
+                <test cmd="generator 100 300 10 7" method="generated"/>
+                <test cmd="generator 100 300 10 8" method="generated"/>
+                <test cmd="generator 100 300 10 9" method="generated"/>
+                <test cmd="generator 100 300 10 10" method="generated"/>
+                <test cmd="fullgenerator 1000 1000 30 1" method="generated"/>
+                <test cmd="fullgenerator 1000 1000 30 2" method="generated"/>
+                <test cmd="fullgenerator 1000 1000 30 3" method="generated"/>
+                <test cmd="fullgenerator 1000 1000 30 4" method="generated"/>
+                <test cmd="fullgenerator 1000 1000 30 5" method="generated"/>
+                <test method="manual"/>
+                <test method="manual" sample="true"/>
+                <test cmd="allgen 1" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/Validator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/allgen.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/fullgenerator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/generator.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/Validator.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/jh01533-ac.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ksoosung77_sol1.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ksoosung77_sol2.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ksoosung77_sol3.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/ksoosung77_wa1.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/ksoosung77_wa2.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main_solution.py" type="python.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mz_K_sol.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/tony9402_ac.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver1_cpp.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver1_py.py" type="python.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver2_cpp.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver2_py.py" type="python.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver3_cpp.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver3_py.py" type="python.3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="implementation"/>
+    </tags>
+</problem>

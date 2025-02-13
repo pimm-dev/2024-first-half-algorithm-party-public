@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="33" short-name="overtaking-discharge" url="https://polygon.codeforces.com/p3KPSAG/ShapeLayer/overtaking-discharge">
+    <names>
+        <name language="korean" value="전역 역전"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="examples">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>4</test-count>
+            <input-path-pattern>examples/%02d</input-path-pattern>
+            <answer-path-pattern>examples/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test description="2024년은 윤년이므로, 2024년 2월 29일을 고려해야한다." method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>17</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="gen_random_normal 100 10" method="generated"/>
+                <test cmd="gen_random_normal 10000 100" method="generated"/>
+                <test cmd="gen_random_normal 5000 50" method="generated"/>
+                <test cmd="gen_random_normal 5000 75" method="generated"/>
+                <test cmd="gen_random_normal_flag 100 10 1" method="generated"/>
+                <test cmd="gen_random_normal_flag 10 10 3" method="generated"/>
+                <test cmd="gen_random_normal_flag 100 30 7" method="generated"/>
+                <test cmd="gen_random_all_config 2020 2030 100 5 7 0 20 1 5 10 10 40 1 7 10 70 110 6 12 1" method="generated"/>
+                <test cmd="gen_random_all_config 2020 2030 100 50 7 0 20 1 5 10 10 40 1 7 10 70 110 6 12 1" method="generated"/>
+                <test cmd="gen_random_all_config 2020 2030 100 100 7 0 20 1 5 10 10 40 1 7 10 70 110 6 12 1" method="generated"/>
+                <test cmd="gen_random_all_config 2020 2030 10000 100 7 0 100 1 30 33 0 100 1 15 33 0 1000 6 6 11" method="generated"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_random_all_config.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_random_normal.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen_random_normal_flag.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::wcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>5</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/jh01533_AC.py" type="python.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ksoosung77_solution.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/ksoosung77_wa.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mz_E_sol.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/shapelayer-default.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/tony9402_ac.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver1_cpp.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver1_py.py" type="python.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver2_cpp.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_ver2_py.py" type="python.pypy3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="dynamic programming"/>
+        <tag value="knapsack"/>
+    </tags>
+</problem>

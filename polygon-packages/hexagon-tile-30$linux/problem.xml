@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="30" short-name="hexagon-tile" url="https://polygon.codeforces.com/p8W0788/sjmjys954646/hexagon-tile">
+    <names>
+        <name language="korean" value="육각타일미로탈출기"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>43</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test cmd="generator 10 10 10 1" method="generated"/>
+                <test cmd="generator 50 10 150 1" method="generated"/>
+                <test cmd="generator 100 500 25000 1" method="generated"/>
+                <test cmd="generator 1000 1000 50000 1" method="generated"/>
+                <test cmd="generator 10 10 10 2" method="generated"/>
+                <test cmd="generator 50 10 150 2" method="generated"/>
+                <test cmd="generator 100 500 25000 2" method="generated"/>
+                <test cmd="generator 1000 1000 50000 2" method="generated"/>
+                <test cmd="generator 10 10 10 3" method="generated"/>
+                <test cmd="generator 50 10 150 3" method="generated"/>
+                <test cmd="generator 100 500 25000 3" method="generated"/>
+                <test cmd="generator 1000 1000 50000 3" method="generated"/>
+                <test cmd="generator 10 10 10 4" method="generated"/>
+                <test cmd="generator 50 10 150 4" method="generated"/>
+                <test cmd="generator 100 500 25000 4" method="generated"/>
+                <test cmd="generator 1000 1000 50000 4" method="generated"/>
+                <test cmd="generator 10 10 10 5" method="generated"/>
+                <test cmd="generator 50 10 150 5" method="generated"/>
+                <test cmd="generator 100 500 25000 5" method="generated"/>
+                <test cmd="generator 1000 1000 50000 5" method="generated"/>
+                <test cmd="snakegenerator 5 8 1" method="generated"/>
+                <test cmd="snakegenerator 99 72 1" method="generated"/>
+                <test cmd="snakegenerator 47 33 1" method="generated"/>
+                <test cmd="snakegenerator 51 88 1" method="generated"/>
+                <test cmd="snakegenerator 31 32 1" method="generated"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test cmd="snakegenerator 999 999 1" method="generated"/>
+                <test cmd="snakegenerator 499 499 1" method="generated"/>
+                <test cmd="snakegenerator2 5 8 1" method="generated"/>
+                <test cmd="snakegenerator2 99 72 1" method="generated"/>
+                <test cmd="snakegenerator2 999 880 1" method="generated"/>
+                <test cmd="snakegenerator2 513 880 1" method="generated"/>
+                <test cmd="fullgenerator 1000 1000 1" method="generated"/>
+                <test cmd="emptygenerator 1" method="generated"/>
+                <test cmd="snakegenerator3 1000 998 1" method="generated"/>
+                <test cmd="customgenerator 1000 1000 65536 1" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/customgenerator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/emptygenerator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/fullgenerator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/generator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/snakegenerator.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/snakegenerator2.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/snakegenerator3.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="wrong-answer">
+                <source path="solutions/jh01533-4direct.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/jh01533-ac.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ksoosung77_solution.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/ksoosung77_tl.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/ksoosung77_wa1.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/ksoosung77_wa2.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main_solution.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/mz_C_WA1.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mz_C_sol.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/tony9402_ac.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_cpp.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/vk_AC_py.py" type="python.pypy3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="bfs"/>
+        <tag value="dfs"/>
+        <tag value="graphs"/>
+    </tags>
+</problem>

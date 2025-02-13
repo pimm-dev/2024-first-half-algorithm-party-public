@@ -1,0 +1,23 @@
+길이가 $N$인 정수 수열 $A_1,A_2,\dots,A_n$이 주어진다. 이때 다음 쿼리를 수행하는 프로그램을 작성하시오.
+
+--- $1$ $l$ $r$ $x$ : $A_i \oplus A_j \oplus A_k = x$ $(l \le i < j < k \le r)$인 $(i,j,k)$쌍이 존재한다면 1, 존재하지 않으면 0을 출력한다. 여기서  $\oplus$는 \href{https://en.wikipedia.org/wiki/Bitwise_operation#XOR}{Bitwise XOR} 연산을 의미한다.
+
+--- $2$ $l$ $r$ $x$ : $l \le i \le r$인 $i$에 대해 $A_i$를 $(A_i+x)\%64$로 바꾼다.
+
+제한
+
+$3 \le N \le 300\,000$
+
+$1 \le Q \le 300\,000$
+
+$0 \le A_i < 64$
+
+$1 \le l \le r \le N$
+
+$1$번 쿼리에 한해서 $r-l+1 \ge 3$
+
+$0 \le x < 64$
+
+입력으로 주어지는 모든 수는 정수이다.
+
+$1$번 쿼리는 한 번 이상 주어진다.

@@ -1,0 +1,35 @@
+영어 지문은 현재 사용하지 않고 있습니다.
+한국어 지문을 이용해 주세요.
+
+
+  \it{Kim is high-interested in trees.}
+
+
+Kim, a druid, is the `Savior of Trees` who manages the \bf{Tree}. The \bf{Tree} that Root manages is an acyclic graph, with $N$ vertices to show how well it's managed. 
+
+
+One day, Young, an evil villain who has always been jealous of Kim's beautiful \bf{Tree}, sets it on fire! In order for Kim to preserve the \bf{tree} as intact as possible, he needs to duplicate as much of the data stored in each vertex of the \bf{Tree} as possible before the \bf{Tree} burns up and disappears.
+
+
+\begin{itemize}
+  \item Initially, Young burned vertex $A$, and Kim is standing at vertex $B$. $(A \neq B)$
+\end{itemize}
+
+
+Kim can choose to perform one of the following actions on the unburned vertex.:
+
+
+\begin{itemize}
+  \item \bf{DUPLICATE}: Kim duplicates the data from the current vertex. This behavior does not consume any time. However, data cannot be duplicated again from a vertex that has already been duplicated.
+  \item \bf{MOVE}: Kim moves to one of the unburned vertices connected to the current vertex.
+  \item \bf{WAIT}: Kim waits at the current vertex without moving.
+\end{itemize}
+
+
+If Kim chooses \bf{MOVE} or \bf{WAIT}, the fire will spread to the vertices for the duration of the action. In other words, any unburned vertices that are connected to a burned vertex will be burned.
+
+
+If Kim ends up on a burned vertex, he will give up trying to save the \bf{Tree} and escape from it. Your job is to find the maximum number of vertices he can duplicate in the \bf{Tree} before he escapes, among all possible cases, and tell him.
+
+
+Let's help Kim stop Young's plan!

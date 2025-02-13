@@ -1,0 +1,53 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Savior of Tree</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Savior of Tree</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>1000 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>영어 지문은 현재 사용하지 않고 있습니다. 한국어 지문을 이용해 주세요.</P><P> <SPAN class="tex-font-style-it">Kim is high-interested in trees.</SPAN></P><P>Kim, a druid, is the 'Savior of Trees' who manages the <SPAN class="tex-font-style-bf">Tree</SPAN>. The <SPAN class="tex-font-style-bf">Tree</SPAN> that Root manages is an acyclic graph, with $$$N$$$ vertices to show how well it's managed. </P><P>One day, Young, an evil villain who has always been jealous of Kim's beautiful <SPAN class="tex-font-style-bf">Tree</SPAN>, sets it on fire! In order for Kim to preserve the <SPAN class="tex-font-style-bf">tree</SPAN> as intact as possible, he needs to duplicate as much of the data stored in each vertex of the <SPAN class="tex-font-style-bf">Tree</SPAN> as possible before the <SPAN class="tex-font-style-bf">Tree</SPAN> burns up and disappears.</P><P></P><UL> <LI> Initially, Young burned vertex $$$A$$$, and Kim is standing at vertex $$$B$$$. $$$(A \neq B)$$$ </LI></UL><P></P><P>Kim can choose to perform one of the following actions on the unburned vertex.:</P><P></P><UL> <LI> <SPAN class="tex-font-style-bf">DUPLICATE</SPAN>: Kim duplicates the data from the current vertex. This behavior does not consume any time. However, data cannot be duplicated again from a vertex that has already been duplicated. </LI><LI> <SPAN class="tex-font-style-bf">MOVE</SPAN>: Kim moves to one of the unburned vertices connected to the current vertex. </LI><LI> <SPAN class="tex-font-style-bf">WAIT</SPAN>: Kim waits at the current vertex without moving. </LI></UL><P></P><P>If Kim chooses <SPAN class="tex-font-style-bf">MOVE</SPAN> or <SPAN class="tex-font-style-bf">WAIT</SPAN>, the fire will spread to the vertices for the duration of the action. In other words, any unburned vertices that are connected to a burned vertex will be burned.</P><P>If Kim ends up on a burned vertex, he will give up trying to save the <SPAN class="tex-font-style-bf">Tree</SPAN> and escape from it. Your job is to find the maximum number of vertices he can duplicate in the <SPAN class="tex-font-style-bf">Tree</SPAN> before he escapes, among all possible cases, and tell him.</P><P>Let's help Kim stop Young's plan!</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>The first line of input contains an integer $$$N$$$ $$$(2 \leq N \leq 50000)$$$. The next $$$N-1$$$ lines contains two connected vertices in the <SPAN class="tex-font-style-bf">Tree</SPAN>. The last line contains the burned vertex $$$A$$$ and the vertex $$$B$$$ where the Kim is located.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>Among all possible cases, print the maximum number of vertices that can be duplicated in the <SPAN class="tex-font-style-bf">Tree</SPAN> before Kim escapes.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="8
+1 2
+2 3
+2 4
+5 4
+4 6
+7 6
+6 8
+5 4
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">8</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">5 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">4 6</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">7 6</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">6 8</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">5 4</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+3
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="13
+10 11
+6 7
+7 11
+7 3
+1 3
+3 4
+12 8
+8 4
+4 5
+5 2
+5 9
+9 13
+13 7
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">13</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">10 11</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">6 7</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">7 11</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">7 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">3 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">12 8</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">8 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">4 5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">5 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">5 9</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">9 13</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">13 7</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+5
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="3
+1 2
+2 3
+1 3
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 3</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+1
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

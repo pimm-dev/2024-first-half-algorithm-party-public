@@ -1,0 +1,3 @@
+[submodule "solutions-editorial"]
+	path = solutions-editorial
+	url = https://github.com/pimm-dev/2024-first-half-algorithm-party-editorial-public
